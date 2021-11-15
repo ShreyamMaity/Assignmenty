@@ -64,8 +64,15 @@ def mailSender(assignment, subject, body, mail):
     message = service.users().messages().send(userId='me', body={'raw': raw_string}).execute()
     print('Message Id: %s' % message['id'])
 
-def getCommitFiles():
-    files = subprocess.check_output(['git', 'diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD']).decode('utf-8').split('\n')
+
+def getLastCommit():
+    return subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
+
+
+def getCommitFiles(commitID):
+    files = subprocess.check_output(['git', 'show', '--pretty=', '--name-only' , str(commitID)]).decode('utf-8').split('\n')
+    print('Last Commit : \n')
+    print(files)
     return files
 
 def getPyFiles(fileList):
@@ -78,6 +85,9 @@ def getPyFiles(fileList):
                 sort[m.group()] = file
     for k, v in sorted(sort.items(), key=lambda x: int(x[0])):
         pyFiles.append(v)
+
+    print('Got Pyfiles : \n')
+    print(pyFiles)
     return pyFiles
 
 def getQuestions(fileList):
@@ -159,19 +169,19 @@ def removeFiles(pdfName):
         os.remove(pdfName + '.docx')
     for file in glob.glob("*.png"):
         os.remove(file)
-    
+
 def main():
 
     mailId = os.environ['INPUT_MAILID']
     fileName = os.environ['INPUT_FILENAME']
-    fileList = getCommitFiles()
+    fileList = getCommitFiles(getLastCommit())
     pyFiles = getPyFiles(fileList)
     questions = getQuestions(pyFiles)
     snaps = getRunSnaps(fileList)
     buildPdf(pyFiles, questions, snaps, 'template.docx' , fileName)
     mailSender(fileName, 'Your Assignment Is here', 'Hello User, Thanks for using Assignment Bot. Hope You love our sevice 😊\n', mailId)
     removeFiles(fileName)
-
+    
 
     
 
