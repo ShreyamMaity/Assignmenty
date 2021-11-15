@@ -1,0 +1,18 @@
+name: Assignmenty Bot
+author: Shreyam Maity
+description: Just Code and Push , Leave The Assignment Part on us....
+inputs:
+  mailId : 
+    description: 'your mail id where you want to recieve the assignment'
+    required: true
+  fileName : 
+    description: 'Filename of your assignment'
+    required: true
+runs:
+  using: docker 
+  image: 'docker://shreyammaity/assignmenty' 
+
+# for publishing purposes
+branding: 
+  icon: check-square
+  color: blue
