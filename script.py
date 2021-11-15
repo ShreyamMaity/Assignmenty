@@ -159,7 +159,7 @@ def removeFiles(pdfName):
         os.remove(pdfName + '.docx')
     for file in glob.glob("*.png"):
         os.remove(file)
-
+    
 def main():
 
     mailId = os.environ['INPUT_MAILID']

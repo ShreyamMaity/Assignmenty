@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 assignmenty
+credentials.json
+token.json
 *.py[cod]
 *$py.class
 
