@@ -37,8 +37,8 @@
    > This action currently supports only  **Python Code Assignments** 🐍<br/>
    > but this GitHub Action can me modified for any code based asssignments.Feel free to contribute.🤗
    - You can use [this](#usage) example to work it out 🧐
-3. create a github repo and clone it, then add a action config (`.yml`) file.Steps are avialable[here](#action-config-guide) for more info 🤔
-4. Add a template docx file and name it `tmplate.docx` or use my template and modify it. Check the template [here](./content/templat.docx) 📑
+3. create a github repo and clone it, then add a action config (`.yml`) file.Steps are avialable [here](#action-config-guide) for more info 🤔
+4. Add a template docx file and name it `tmplate.docx` or use my template and modify it. Check the template [here](./content/template.docx) 📑
 5. save the template file , action config file in your github repo 🐙
 6. Push your code with snaps and Enjoy 😍
 
