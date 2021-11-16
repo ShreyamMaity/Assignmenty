@@ -17,7 +17,7 @@
   
 
 
-- This is a [GitHub Action](https://developer.github.com/actions/) to create your assignment automatically with help of version control.
+- This is a [GitHub Action](https://developer.github.com/actions/) to create your assignment automatically with the help of git version control.
 
 - It takes code and snaps from your latest commit and make it an assignment and send you in mail📧
 
