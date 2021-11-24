@@ -15,17 +15,26 @@
 
 > Just Code and Push , Leave The Assignment Part on us....Happy Coding </>
   
+<p align="center">
+   
 
+https://user-images.githubusercontent.com/38105595/143308377-c08db022-9809-4a4d-9cbe-22097399f06b.mp4
+
+
+</p>
+       
 
 - This is a [GitHub Action](https://developer.github.com/actions/) to create your assignment automatically with the help of git version control.
 
 - It takes code and snaps from your latest commit and make it an assignment and send you in mail📧
 
 - This action runs in a Docker container and therefore only supports Linux🐧
+                                                          
+- [Watch Full Config Video Here](https://youtu.be/OWB7oYtS9N8)
 -----
 ## Prep Work
 
-1. Create you coding assignments like       
+1. Create you coding assignments like or [Watch Config Video Here](https://youtu.be/OWB7oYtS9N8?t=17) 
     ```bash
     ``` This is Your Question , Write Questions like this```
 
@@ -37,7 +46,7 @@
    > This action currently supports only  **Python Code Assignments** 🐍<br/>
    > but this GitHub Action can me modified for any code based asssignments.Feel free to contribute.🤗
    - You can use [this](#usage) example to work it out 🧐
-3. create a github repo and clone it, then add a action config (`.yml`) file.Steps are avialable [here](#action-config-guide) for more info 🤔
+3. create a github repo and clone it, then add a action config (`.yml`) file.Steps are avialable [here](https://youtu.be/OWB7oYtS9N8?t=76) for more info 🤔
 4. Add a template docx file and name it `tmplate.docx` or use my template and modify it. Check the template [here](./content/template.docx) 📑
 5. save the template file , action config file in your github repo 🐙
 6. Push your code with snaps and Enjoy 😍
@@ -69,7 +78,8 @@ The following example [workflow step](https://help.github.com/en/actions/configu
             FILENAME : 'assignment' #assignment file name
     ```
 Just copy the above code and paste it in your `.yml` file
-
+or watch this video to understand how to config.[Watch Config Video Here](https://youtu.be/OWB7oYtS9N8?t=76)  
+                                                          
 ----
   
 
